@@ -1,6 +1,6 @@
 import { prepareRunChecker } from "../../../../lib/shared/util.js"
 
-const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 200 })
+const { shouldRun: scrollShouldRun } = prepareRunChecker({ timerDelay: 300 })
 export default class HandGestureController {
   #view
   #service
@@ -20,7 +20,7 @@ export default class HandGestureController {
   }
 
   #scrollPage(direction) {
-    const pixelsPerScroll = 100
+    const pixelsPerScroll = 250
 
     if (this.#lastDirection.direction === direction) {
       this.#lastDirection.y = (
